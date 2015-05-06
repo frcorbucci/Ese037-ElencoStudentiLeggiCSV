@@ -32,10 +32,9 @@ int main(int argc, char** argv)
     {  
 	fprintf(stderr,"Spiacenti ma il File non e' aperto.\n");
        return 1;
-	}
-	
-	else
-	{
+     }
+     else
+     {
     fprintf(stdout,"Il File e' aperto.\n");
     
     fscanf(puntaFile, "%[^;];%[^;];%[^;];%[^;\n]\n", k.nome, k.cognome, &(k.eta), k.classe);
@@ -54,7 +53,7 @@ int main(int argc, char** argv)
                 k.classe);
         fscanf(puntaFile, "%[^;];%[^;];%d;%[^;\n]\n", k.nome, k.cognome, &(k.eta), k.classe);
     	}	
-	}
+   	}
     
     fclose(puntaFile);
     return (EXIT_SUCCESS);
