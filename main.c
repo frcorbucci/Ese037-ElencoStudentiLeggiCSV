@@ -26,15 +26,14 @@ int main(int argc, char** argv)
     printf("Prego inserire il File d'aprire: ");
     scanf("%s.\n", nomeFile);
     
-    puntaFile=fopen("elenco.csv", "r");
+    puntaFile = fopen("elenco.csv", "r");
     
     if(puntaFile == NULL)
     {  
 	fprintf(stderr,"Spiacenti ma il File non e' aperto.\n");
-        return 1;
-     }
+    }
      else
-     {
+    {
     fprintf(stdout,"Il File e' aperto.\n");
     
     fscanf(puntaFile, "%[^;];%[^;];%[^;];%[^;\n]\n", k.nome, k.cognome, &(k.eta), k.classe);
@@ -45,7 +44,7 @@ int main(int argc, char** argv)
     while(!feof(puntaFile))
     	{
     	i++;
-        fprintf(stdout,"Studente %d\nNome: %s\nCognome: %s\nEta': %d\nClasse: %s\n\n",
+        fprintf(stdout,"\nStudente %d\nNome: %s\nCognome: %s\nEta': %d\nClasse: %s\n\n",
                 i,
                 k.nome,
                 k.cognome,
@@ -53,7 +52,7 @@ int main(int argc, char** argv)
                 k.classe);
         fscanf(puntaFile, "%[^;];%[^;];%d;%[^;\n]\n", k.nome, k.cognome, &(k.eta), k.classe);
     	}	
-   	}
+    }
     
     fclose(puntaFile);
     return (EXIT_SUCCESS);
