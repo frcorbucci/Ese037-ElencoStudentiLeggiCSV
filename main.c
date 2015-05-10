@@ -31,6 +31,7 @@ int main(int argc, char** argv)
     if(puntaFile == NULL)
     {  
 	fprintf(stderr,"Spiacenti ma il File non e' aperto.\n");
+	return 1;
     }
      else
     {
