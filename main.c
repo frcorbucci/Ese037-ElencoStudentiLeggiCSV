@@ -26,12 +26,12 @@ int main(int argc, char** argv)
     printf("Prego inserire il File d'aprire: ");
     scanf("%s.\n", nomeFile);
     
-    puntaFile=fopen("elenco.csv", "rb");
+    puntaFile=fopen("elenco.csv", "r");
     
-    if(puntaFile==NULL)
+    if(puntaFile == NULL)
     {  
 	fprintf(stderr,"Spiacenti ma il File non e' aperto.\n");
-       return 1;
+        return 1;
      }
      else
      {
