@@ -24,7 +24,7 @@ int main(int argc, char** argv)
     char nomeFile[MAX_STDLIB+1];
     
     printf("Prego inserire il File d'aprire: ");
-    scanf("%s.\n", nomFile);
+    scanf("%s.\n", nomeFile);
     
     puntaFile = fopen("elenco.csv", "r");
     
